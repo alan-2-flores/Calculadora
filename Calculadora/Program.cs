@@ -1,8 +1,8 @@
 ﻿using System;
 
 namespace Calculadora {
-    class Program {
-        class operaciones {
+    public class Calculadora {
+        public class Operaciones {
             public double suma(double a, double b) {
                 return a+b;
             }
@@ -24,7 +24,7 @@ namespace Calculadora {
             //iniciar variables
             int option;
             double a, b;
-            var resultados = new operaciones();
+            var resultados = new Operaciones();
 
             Console.WriteLine("Introduce el numero de la operacion a realizar:");
             Console.WriteLine("1. Suma");
