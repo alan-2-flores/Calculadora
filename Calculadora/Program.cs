@@ -2,11 +2,29 @@
 
 namespace Calculadora {
     class Program {
+        class operaciones {
+            public double suma(double a, double b) {
+                return a+b;
+            }
+            public double resta(double a, double b)
+            {
+                return a - b;
+            }
+            public double multiplicacion(double a, double b)
+            {
+                return a * b;
+            }
+            public double division(double a, double b)
+            {
+                return a / b;
+            }
+        }
+
         static void Main() {
             //iniciar variables
             int option;
             double a, b;
-            double resultado;
+            var resultados = new operaciones();
 
             Console.WriteLine("Introduce el numero de la operacion a realizar:");
             Console.WriteLine("1. Suma");
@@ -30,26 +48,22 @@ namespace Calculadora {
                 switch (option)
                 {
                     case 1:
-                        resultado = a + b;
-                        Console.WriteLine("El resultado es:" + resultado);
+                        Console.WriteLine("El resultado es:" + resultados.suma(a,b));
                         Main();
                         break;
 
                     case 2:
-                        resultado = a - b;
-                        Console.WriteLine("El resultado es:" + resultado);
+                        Console.WriteLine("El resultado es:" + resultados.resta(a, b));
                         Main();
                         break;
 
                     case 3:
-                        resultado = a * b;
-                        Console.WriteLine("El resultado es:" + resultado);
+                        Console.WriteLine("El resultado es:" + resultados.multiplicacion(a,b));
                         Main();
                         break;
 
                     case 4:
-                        resultado = a / b;
-                        Console.WriteLine("El resultado es:" + resultado);
+                        Console.WriteLine("El resultado es:" + resultados.division(a,b));
                         Main();
                         break;
 
